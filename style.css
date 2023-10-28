@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: url('https://files.asemooni.com/cdn/2021/5/16/55c4caee2c34964aa93be148471910d7.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform: scale(1);
+}
+.circle{
+    background-color: #837c41;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.gradient-circle{
+    background: conic-gradient(
+        rgb(223, 223, 55) 0%,
+        rgb(199, 199, 48) 40%,
+        #fff 40%,
+        #fff 60%,
+        rgb(185, 185, 66)60%,
+        rgb(153, 153, 60) 100%
+    );
+    width: 320px;
+    height: 320px;
+    z-index: -2;
+    border-radius: 50%;
+    position: absolute;
+}
+.pointer{
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: block;
+}
+.pointer_container{
+    position: absolute;
+    top: -40px;
+    width: 20px;
+    height: 190px;
+    left: 140px;
+    animation: rotate 7.5s linear forwards infinite;
+    transform-origin: bottom center;
+}
+@keyframes rotate {
+    from{
+        transform: rotete(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}  
+
+.grows{
+     animation:grow 3s linear forwards;
+}
+@keyframes grow{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}  
+.shrink{
+    animation:shrink 3s linear forwards;
+}
+@keyframes shrink{
+    from{
+        transform: scale(1.2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
